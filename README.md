@@ -1,24 +1,23 @@
-Assignment: CSS Hell
-====================
+#Part 1
+##Changes Made to Books
+###All Books
 
-You will skin 3 project gutenberg stories with custom CSS.
+- Inserted tag to link to the part1-style.css file after exiting style tags at the start of each document
+- Added the class 'gutenburg-metatext' to the \<pre> elements added by the gutenburg projects before and after the document texts  
 
-You will skin 2 versions of a possible professional homepage for your
-self with 2 versions of CSS.
+###Book 1
 
-Read requirements.org
+- Renamed file from 17-h.htm to 1.html
+###Book 2
 
-Read this comic http://theoatmeal.com/comics/design_hell
+- Renamed file from 16328-h.htm to 2.html
+- Inserted the following into 2.html so that we had an image an image caption to style
 
-git clone https://github.com/abramhindle/CMPUT404-assignment-css-hell.git
+        <figure>
+            <img src="beowulf-title.png" alt="A cover image for Beowulf created by Austin Crapo, Licensed to the public domain"></img>
+            <figcaption>A title cover for the Beowulf book</figcaption>
+        </figure>
 
-License/Copyright
-=================
+###Book 3
 
-Textual content is copyright Abram Hindle (C) 2013 under the CC-BY-SA
-4.0 unported license. Attribution should be a hyperlink to the
-repository and (C) 2013 Abram Hindle visibile in the text.
-
-Code is licensed under the Apache 2.0 license.
-
-
+- Renamed file from 29057-h.htm to 3.html

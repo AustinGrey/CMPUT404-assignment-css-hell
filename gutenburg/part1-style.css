@@ -6,9 +6,10 @@ html{
     --impact-fnt: "Arial", "Sans-serif";
 
     font-family: var(--body-fnt);
+    background-color: var(--bg-clr);
 }
 body{
-    background-color: var(--bg-clr);
+    background: transparent;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: var(--impact-fnt);
@@ -27,14 +28,23 @@ h2{
 body>p:first-letter{
     font-size: 1.5em;
 }
-/* The Book of Mormon uses these for verses */
-pre{
+/* The Book of Mormon uses pre tags for verses,  */
+pre:not(.gutenburg-metatext){
     border-left: 2px solid var(--primary-clr);
     padding-left: 2em;
     margin-left: calc(5% + 2px);
     font-style: normal;
 }
+/* This has no effect on the gutenberg-metatext pre's because their first line is always blank*/
 pre:first-line{
     font-weight: bold;
     font-style: italic;
+}
+
+/* Only book with an image is beowulf */
+img{
+    box-shadow: 0.3em 0.3em 2px rgba(0,0,0,0.3);
+    border-radius: 0.4em;
+    border: 1px solid var(--primary-clr);
+    width: 100%;
 }
