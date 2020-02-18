@@ -1,0 +1,40 @@
+html{
+    --bg-clr: #fff6e4;
+    --primary-clr: #10095b;
+    --secondary-clr: #d5c227;
+    --body-fnt: "Georgia", "Time New Roman", Times, Serif;
+    --impact-fnt: "Arial", "Sans-serif";
+
+    font-family: var(--body-fnt);
+}
+body{
+    background-color: var(--bg-clr);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--impact-fnt);
+    color: var(--primary-clr)
+}
+h1,h2{
+    text-decoration: underline var(--secondary-clr);
+}
+h1{
+    text-decoration-width: 3px;
+}
+h2{
+    text-decoration-width: 1px;
+}
+
+body>p:first-letter{
+    font-size: 1.5em;
+}
+/* The Book of Mormon uses these for verses */
+pre{
+    border-left: 2px solid var(--primary-clr);
+    padding-left: 2em;
+    margin-left: calc(5% + 2px);
+    font-style: normal;
+}
+pre:first-line{
+    font-weight: bold;
+    font-style: italic;
+}
