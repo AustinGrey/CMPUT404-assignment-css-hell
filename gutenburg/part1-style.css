@@ -11,11 +11,12 @@ html{
 body{
     background: transparent;
 }
-h1,h2,h3,h4,h5,h6{
+/* The ag society address using fm classes for headers in some areas, and beowulf uses specific title classes*/
+h1,h2,h3,h4,h5,h6,.fm1,.fm2,.fm3,.fm4,.title-main{
     font-family: var(--impact-fnt);
     color: var(--primary-clr)
 }
-h1,h2{
+h1,h2,.fm1,.fm2,.title-main{
     text-decoration: underline var(--secondary-clr);
 }
 h1{
@@ -25,8 +26,12 @@ h2{
     text-decoration-width: 1px;
 }
 
+/*Paragraphs show as starts of chapters, and are sometimes used as heading, this applies to both*/
 body>p:first-letter{
     font-size: 1.5em;
+}
+p{
+    margin-bottom: 1.1em; /* Increase bottom margin for legibility*/
 }
 /* The Book of Mormon uses pre tags for verses,  */
 pre:not(.gutenburg-metatext){
@@ -47,4 +52,9 @@ img{
     border-radius: 0.4em;
     border: 1px solid var(--primary-clr);
     width: 100%;
+}
+figcaption{
+    text-align: center;
+    font-size: 0.5em;
+    font-style: italic;
 }

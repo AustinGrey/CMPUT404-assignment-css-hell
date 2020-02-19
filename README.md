@@ -11,7 +11,7 @@
 ###Book 2
 
 - Renamed file from 16328-h.htm to 2.html
-- Inserted the following into 2.html so that we had an image an image caption to style
+- Inserted the following into 2.html so that we had an image and image caption to style
 
         <figure>
             <img src="beowulf-title.png" alt="A cover image for Beowulf created by Austin Crapo, Licensed to the public domain"></img>
