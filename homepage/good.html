@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Homepage</title>
+</head>
+
+<body>
+<header class="flex-col-start">
+    <div class="woodbar"></div>
+    <div class="bluebar">
+        <span>Austin Crapo</span>
+    </div>
+    <div class="flex-row-center greybar">
+        <a>Who I Am</a>
+        <a>What I've Done</a>
+        <a>What I Can Do For You</a>
+    </div>
+</header>
+<div class="content">
+    <div class="card-left">
+        <img src="austin.png" alt="image of austin crapo">
+        <h1>Who I Am</h1>
+        <p>
+            My name is Austin Crapo. I've worked for the University of Alberta doing web application development.
+            I like sushi, pizza, the internet, and good health. I dislike toast. I'm excited for autonomous vehicles.
+        </p>
+    </div>
+    <div class="card-right">
+        <img src="austin.png" alt="image of austin crapo">
+        <h1>What I've Done</h1>
+        <p>
+            I've worked on the following projects:
+            <ul>
+                <li>GLIM - A graphics library for the MIPS assembly language in X11 terminals.</li>
+            </ul>
+        </p>
+    </div>
+    <div class="card-left">
+        <img src="austin.png" alt="image of austin crapo">
+        <h1>What I Can Do For You</h1>
+        <p>
+            I can do web development, general application programming, CSS, HTML, and bring a smile to your team.
+        </p>
+    </div>
+</div>
+<aside>
+    Quick Facts
+    <ul>
+        <li>Fact 1</li>
+        <li>Fact 2</li>
+    </ul>
+</aside>
+<footer class="woodbar">
+    <div class="flex-row-center">
+        <a>Who I Am</a>
+        <a>What I've Done</a>
+        <a>What I Can Do For You</a>
+    </div>
+</footer>
+</body>
+
+</html>
+<style>
+    body{
+        display: grid;
+        grid-template-areas:
+                "header  header "
+                "content sidebar"
+                "footer  footer ";
+        margin: 0;
+    }
+    header{
+        grid-area: header;
+    }
+    .content{
+        grid-area: content;
+        margin: 0.5em;
+    }
+    aside{
+        grid-area: sidebar;
+        background: #efefef;
+        border-radius: 0.4em;
+        margin: 0.5em;
+    }
+    footer{
+        grid-area: footer;
+    }
+
+    .woodbar{
+        background-size: cover;
+        background: saddlebrown url("wood-grain.png") center;
+        height: 2em;
+        color: white;
+    }
+
+    .bluebar{
+        background: linear-gradient(to bottom, #197fbf, #006596);
+    }
+    .bluebar>span{
+        color: white;
+    }
+
+    .greybar{
+        background: grey;
+        color: white;
+    }
+
+    .card-left img{
+        float: left;
+    }
+    .card-right img{
+        float: right;
+    }
+
+    /* I hate thinking about all the fiddly flex-box attributes, just defining some convenience classes */
+    .flex-row-start  {display: flex; flex-direction: row; justify-content: start;}
+    .flex-row-between{display: flex; flex-direction: row; justify-content: space-between;}
+    .flex-row-around {display: flex; flex-direction: row; justify-content: space-around;}
+    .flex-row-evenly {display: flex; flex-direction: row; justify-content: space-evenly;}
+    .flex-row-center {display: flex; flex-direction: row; justify-content: center;}
+    .flex-row-end    {display: flex; flex-direction: row; justify-content: end;}
+
+    .flex-row_r-start  {display: flex; flex-direction: row-reverse; justify-content: start;}
+    .flex-row_r-between{display: flex; flex-direction: row-reverse; justify-content: space-between;}
+    .flex-row_r-around {display: flex; flex-direction: row-reverse; justify-content: space-around;}
+    .flex-row_r-evenly {display: flex; flex-direction: row-reverse; justify-content: space-evenly;}
+    .flex-row_r-center {display: flex; flex-direction: row-reverse; justify-content: center;}
+    .flex-row_r-end    {display: flex; flex-direction: row-reverse; justify-content: end;}
+
+    .flex-col-start  {display: flex; flex-direction: column; justify-content: start;}
+    .flex-col-between{display: flex; flex-direction: column; justify-content: space-between;}
+    .flex-col-around {display: flex; flex-direction: column; justify-content: space-around;}
+    .flex-col-evenly {display: flex; flex-direction: column; justify-content: space-evenly;}
+    .flex-col-center {display: flex; flex-direction: column; justify-content: center;}
+    .flex-col-end    {display: flex; flex-direction: column; justify-content: end;}
+
+    .flex-col_r-start  {display: flex; flex-direction: column-reverse; justify-content: start;}
+    .flex-col_r-between{display: flex; flex-direction: column-reverse; justify-content: space-between;}
+    .flex-col_r-around {display: flex; flex-direction: column-reverse; justify-content: space-around;}
+    .flex-col_r-evenly {display: flex; flex-direction: column-reverse; justify-content: space-evenly;}
+    .flex-col_r-center {display: flex; flex-direction: column-reverse; justify-content: center;}
+    .flex-col_r-end    {display: flex; flex-direction: column-reverse; justify-content: end;}
+
+
+</style>
