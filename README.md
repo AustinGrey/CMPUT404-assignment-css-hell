@@ -21,3 +21,7 @@
 ###Book 3
 
 - Renamed file from 29057-h.htm to 3.html
+
+# Part 2
+
+Original html and css content is licensed under the MIT license. CSS obtained from other sources is specified in the CSS files and is Licenced there. All photographs remain copyright Austin Crapo and may only be used with written permission. It is granted use to view the images or host them on a webserver only for the purposes of marking this assignment. No other use is granted by this license.
