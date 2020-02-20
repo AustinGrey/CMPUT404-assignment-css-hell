@@ -1,0 +1,156 @@
+html{
+    font-family: "Arial", sans-serif;
+}
+body{
+    display: grid;
+    grid-template:
+            "header  header "
+            "content sidebar"
+            "footer  footer " / 1fr 33%;
+    margin: 0;
+}
+header{
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+    margin: 0.5em;
+    font-family: "sans-serif";
+}
+aside{
+    grid-area: sidebar;
+    background: #efefef;
+    border-radius: 0.4em;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+}
+aside>div:nth-child(1){
+    font-style: italic;
+    font-size: 1.5em;
+}
+aside>div:nth-child(2){
+    font-weight: bold;
+    font-size: 2em;
+}
+footer{
+    grid-area: footer;
+}
+
+.woodbar{
+    background-size: cover;
+    background: saddlebrown url("wood-grain.png") center;
+    height: 2em;
+    color: white;
+}
+
+.bluebar{
+    background: linear-gradient(to bottom, #197fbf, #006596);
+    color: white;
+    font-size: 6em;
+    text-align: center;
+    text-shadow: 0 0 0.5em white;
+}
+.bluebar::first-letter {
+    font-size: 1.4em;
+
+    /* This text gradient trick was taken from CSS Tricks, https://css-tricks.com/snippets/css/gradient-text/, 2020-02-19*/
+    background: -webkit-linear-gradient(#fafcf9, #f4d2a9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bluebar>span{
+    position: relative;
+    background: -webkit-linear-gradient(#fafcf9, #f4d2a9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bluebar .wrd-float {
+    position: absolute;
+    font-size: 3.5rem;
+    top: -0.6em;
+    left: 1.7em;
+
+    background: -webkit-linear-gradient(#fafcf9, #f9f0e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.greybar{
+    background: linear-gradient(to bottom, #343333, #675e55);
+    padding-bottom: 0.5em;
+    border-bottom: 0.2em solid #2c7cb6;
+}
+.greybar a{
+    --arrow-clr: transparent;
+    position: relative;
+}
+.greybar a:hover{
+    --arrow-clr: #2c7cb6;
+}
+.greybar a::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.5em solid transparent;
+    border-bottom-color: var(--arrow-clr);
+    position: absolute;
+    bottom: -0.5em;
+    left: calc(50% - 0.5em);
+}
+
+.card-left img{
+    float: left;
+}
+.card-right img{
+    float: right;
+}
+
+img.float_img{
+    width: 7em;
+    height: 7em;
+    object-fit: cover; /* Idea to use object-fit obtained from https://www.educative.io/edpresso/how-to-crop-an-image-in-css, 2020-02-19. No code other than this exact property was used.*/
+    margin: 0.5em;
+    border: 0.2em solid #eee;
+    box-shadow: 3px 3px 6px #0008;
+}
+
+img[src="3d-print.jpg"]{
+    transform: rotate(90deg);
+    box-shadow: 3px -3px 6px #0008;
+}
+
+.links a{
+    color: white;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+/* I hate thinking about all the fiddly flex-box attributes, just defining some convenience classes */
+.flex-row-start  {display: flex; flex-direction: row; justify-content: start;}
+.flex-row-between{display: flex; flex-direction: row; justify-content: space-between;}
+.flex-row-around {display: flex; flex-direction: row; justify-content: space-around;}
+.flex-row-evenly {display: flex; flex-direction: row; justify-content: space-evenly;}
+.flex-row-center {display: flex; flex-direction: row; justify-content: center;}
+.flex-row-end    {display: flex; flex-direction: row; justify-content: end;}
+
+.flex-row_r-start  {display: flex; flex-direction: row-reverse; justify-content: start;}
+.flex-row_r-between{display: flex; flex-direction: row-reverse; justify-content: space-between;}
+.flex-row_r-around {display: flex; flex-direction: row-reverse; justify-content: space-around;}
+.flex-row_r-evenly {display: flex; flex-direction: row-reverse; justify-content: space-evenly;}
+.flex-row_r-center {display: flex; flex-direction: row-reverse; justify-content: center;}
+.flex-row_r-end    {display: flex; flex-direction: row-reverse; justify-content: end;}
+
+.flex-col-start  {display: flex; flex-direction: column; justify-content: start;}
+.flex-col-between{display: flex; flex-direction: column; justify-content: space-between;}
+.flex-col-around {display: flex; flex-direction: column; justify-content: space-around;}
+.flex-col-evenly {display: flex; flex-direction: column; justify-content: space-evenly;}
+.flex-col-center {display: flex; flex-direction: column; justify-content: center;}
+.flex-col-end    {display: flex; flex-direction: column; justify-content: end;}
+
+.flex-col_r-start  {display: flex; flex-direction: column-reverse; justify-content: start;}
+.flex-col_r-between{display: flex; flex-direction: column-reverse; justify-content: space-between;}
+.flex-col_r-around {display: flex; flex-direction: column-reverse; justify-content: space-around;}
+.flex-col_r-evenly {display: flex; flex-direction: column-reverse; justify-content: space-evenly;}
+.flex-col_r-center {display: flex; flex-direction: column-reverse; justify-content: center;}
+.flex-col_r-end    {display: flex; flex-direction: column-reverse; justify-content: end;}

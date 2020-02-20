@@ -1,0 +1,160 @@
+html{
+    font-family: "Comic Sans MS", fantasy;
+}
+body{
+    display: grid;
+    grid-template:
+            "header  header "
+            "content sidebar"
+            "footer  footer " / 1fr 33%;
+}
+header{
+    background: blue;
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+}
+footer{
+    grid-area: footer;
+}
+aside{
+    grid-area: sidebar;
+    background: #ffcc00;
+    color: #42775d;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+}
+aside>div:first-child{
+    display: none;
+}
+aside>div:nth-child(2){
+    font-size: 3em;
+}
+.bluebar{
+    font-size: 5em;
+    text-align: center;
+    padding-top: 2rem;
+}
+.bluebar>span{
+    background: -webkit-linear-gradient(left, #fcf963, #fd4900, #1d01a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    text-shadow: 0 0 0.5em white;
+}
+.lens-flare-1{
+    background: radial-gradient(#ffffe0aa 1%, #fffd 3%, #ffffe0aa  5%, #fff0 6%, #fff0 30%, #ffffe0aa 31%, #fffd 35%, #ffffe0aa 37%, #fff0 38%);
+    width: 2em;
+    height: 2em;
+    position: fixed;
+    clip-path: circle(1em);
+}
+.lens-flare-1>*{
+    background: radial-gradient(#fffd 13%, #ffffe0aa);
+    width: 1em;
+    height: 1em;
+    clip-path: circle(0.5em);
+}
+.lens-flare-2{
+    background: radial-gradient(#ffffe0aa 1%, #fffd 3%, #ffffe0aa  5%, #fff0 6%, #fff0 30%, #ffffe0aa 31%, #fffd 35%, #ffffe0aa 37%, #fff0 38%);
+    width: 2em;
+    height: 2em;
+    position: fixed;
+    clip-path: circle(1em);
+    transform: rotate(270deg) scale(0.5);
+    top: 0;
+    right: 0;
+}
+.lens-flare-2>*{
+    background: radial-gradient(#fffd 13%, #ffffe0aa);
+    width: 1em;
+    height: 1em;
+    clip-path: circle(0.5em);
+}
+.beta-tag{
+    background: yellow;
+    position: absolute;
+    -webkit-text-fill-color: black;
+    font-size: 0.5em;
+    top: -0.5em;
+    right: 1em;
+}
+.greybar{
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+.greybar>*{
+    border-right: 1px solid black;
+    background: linear-gradient(to bottom, #ffd700, #ff6d04);
+    padding: 0.5em 1em;
+}
+.greybar>*:last-child{
+    border-right: none;
+}
+
+.links a{
+    text-decoration: none;
+    color: black;
+}
+
+.miffles{
+    clip-path: polygon(2% 100%, 11.23% 74%, 27.88% 77.5%, 49% 85%, 61% 92%, 81% 85%, 95% 84%, 96% 66%, 97% 42%, 93% 24%, 96% 6%, 82% 2%, 63% 4%, 51% 11%, 30.83% 0.00%, 11% 4%, 4.31% 3.75%, 2.18% 16.25%, 2% 38%, 3.02% 59.25%, 3.3% 80.25%, 7.34% 66.5%);
+    width: 100%;
+    padding-bottom: 2em;
+    background: hotpink;
+}
+.miffles > div {
+    padding: 1em 5%;
+}
+
+img{
+    width: 8em;
+    margin: 1em;
+}
+
+.card-left img{
+    float: left;
+}
+
+.card-right img{
+    float: right;
+}
+
+img[src="3d-print.jpg"]{
+    position: relative;
+    top: -2em;
+}
+aside{
+    float: right;
+}
+
+/* I hate thinking about all the fiddly flex-box attributes, just defining some convenience classes */
+.flex-row-start  {display: flex; flex-direction: row; justify-content: start;}
+.flex-row-between{display: flex; flex-direction: row; justify-content: space-between;}
+.flex-row-around {display: flex; flex-direction: row; justify-content: space-around;}
+.flex-row-evenly {display: flex; flex-direction: row; justify-content: space-evenly;}
+.flex-row-center {display: flex; flex-direction: row; justify-content: center;}
+.flex-row-end    {display: flex; flex-direction: row; justify-content: end;}
+
+.flex-row_r-start  {display: flex; flex-direction: row-reverse; justify-content: start;}
+.flex-row_r-between{display: flex; flex-direction: row-reverse; justify-content: space-between;}
+.flex-row_r-around {display: flex; flex-direction: row-reverse; justify-content: space-around;}
+.flex-row_r-evenly {display: flex; flex-direction: row-reverse; justify-content: space-evenly;}
+.flex-row_r-center {display: flex; flex-direction: row-reverse; justify-content: center;}
+.flex-row_r-end    {display: flex; flex-direction: row-reverse; justify-content: end;}
+
+.flex-col-start  {display: flex; flex-direction: column; justify-content: start;}
+.flex-col-between{display: flex; flex-direction: column; justify-content: space-between;}
+.flex-col-around {display: flex; flex-direction: column; justify-content: space-around;}
+.flex-col-evenly {display: flex; flex-direction: column; justify-content: space-evenly;}
+.flex-col-center {display: flex; flex-direction: column; justify-content: center;}
+.flex-col-end    {display: flex; flex-direction: column; justify-content: end;}
+
+.flex-col_r-start  {display: flex; flex-direction: column-reverse; justify-content: start;}
+.flex-col_r-between{display: flex; flex-direction: column-reverse; justify-content: space-between;}
+.flex-col_r-around {display: flex; flex-direction: column-reverse; justify-content: space-around;}
+.flex-col_r-evenly {display: flex; flex-direction: column-reverse; justify-content: space-evenly;}
+.flex-col_r-center {display: flex; flex-direction: column-reverse; justify-content: center;}
+.flex-col_r-end    {display: flex; flex-direction: column-reverse; justify-content: end;}
